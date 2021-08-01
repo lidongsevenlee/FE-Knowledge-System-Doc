@@ -12,6 +12,7 @@ module.exports = {
       ['/css/', 'CSS']
     ]
   },
+  dest: path.resolve(__dirname, '../../dist'),
   configureWebpack: {
     resolve: {
       alias: {
