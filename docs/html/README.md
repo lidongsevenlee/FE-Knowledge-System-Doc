@@ -73,3 +73,20 @@ HTML（HypeText Markup Language 超文本标记语言） 是一种描述语言�
   * 内联：嵌入一行，不换行
 
 * 属性值：属性包含元素的额外信息，这些信息不会出现在实际的内容中，如id, 标识标签唯一，可用document.getElementById("id")来获取元素
+
+## script 元素
+
+### async属性
+* 对于普通脚本，如果存在 async 属性，那么普通脚本会被并行请求，并尽快解析和执行。
+* 对于模块脚本，如果存在 async 属性，那么脚本及其所有依赖都会在延缓队列中执行，因此它们会被并行请求，并尽快解析和执行。
+
+### defer属性
+这个布尔属性被设定用来通知浏览器该脚本将在文档完成解析后，触发 DOMContentLoaded (en-US) 事件前执行。
+有 defer 属性的脚本会阻止 DOMContentLoaded 事件，直到脚本被加载并且解析完成。
+defer 属性对模块脚本没有作用 —— 他们默认 defer。
+
+### type属性
+* 支持的MIME类型包括text/javascript, text/ecmascript, application/javascript, 和application/ecmascript，缺省解析为JavaScript
+* 如果MIME类型不是JavaScript类型（上述支持的类型），则该元素所包含的内容会被当作数据块而不会被浏览器执行
+* 如果type属性为module，代码会被当作JavaScript模块
+

@@ -96,3 +96,16 @@ body {
 
 <img src="~@images/border-box.png" width="400" height="200" style="margin-top: 10px">
 
+## 常用布局
+
+### 水平、垂直居中
+* 绝对定位，绝对偏移
+* inline化，文本居中，设置行高
+* flex
+* ...
+
+### N宫格盒子hover边框高亮效果
+<img src="~@images/n-box-hover.png" width="400" height="400" style="margin-top: 10px">
+
+## 常用动画
+渐变、移动、旋转、缩放

@@ -9,7 +9,14 @@ module.exports = {
     sidebar: [
       ['/', 'Home'],
       ['/html/', 'HTML'],
-      ['/css/', 'CSS']
+      ['/css/', 'CSS'],
+      ['/javascript/', 'JavaScript'],
+      ['/computer-basic/', '计算机基础'],
+      ['/data-structure_algorithm/', '数据结构与算法'],
+      ['/browser_nodejs/', '运行环境'],
+      ['/frame_lib/', '框架与类库'],
+      ['/fe-project/', '前端工程'],
+      ['/business/', '项目与业务']
     ]
   },
   dest: path.resolve(__dirname, '../../dist'),
