@@ -1,11 +1,14 @@
 #!/usr/bin/env sh
 set -e
 
+npm run docs:build
+
 cd dist
 
 git init
 git add -A
 git commit -m 'depoly'
-
-git push -f git@github.com:MiceLiD/micelid.github.io.git master
+git branch -M main
+git remote add origin git@github.com:MiceLiD/micelid.github.io.git
+git push -u origin main
 cd ..
