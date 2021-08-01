@@ -1,8 +1,0 @@
-language: node_js
-node_js:
-  - lts/*
-install:
-  - npm ci # npm ci
-script:
-  - npm run docs:build # npm run docs:build
-  - sh ./depoly.sh
