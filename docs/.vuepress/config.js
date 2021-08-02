@@ -16,7 +16,8 @@ module.exports = {
       ['/browser_nodejs/', '运行环境'],
       ['/frame_lib/', '框架与类库'],
       ['/fe-project/', '前端工程'],
-      ['/business/', '项目与业务']
+      ['/business/', '项目与业务'],
+      ['/interview-qa/', '面试']
     ]
   },
   dest: path.resolve(__dirname, '../../dist'),
