@@ -18,12 +18,41 @@
 ### why 原型
 
 ### new操作符原理
+```javascript
+function createNew() {
+  const o = {}
+  const Contr = Array.prototype.shift.call(arguments)
+  o.__proto__ = Contr.prototype
+  const result = Contr.apply(o, arguments)
+  if (typeof result === 'object' && result !== null) {
+    return result
+  }
+  return o
+}
+
+function A(n) {
+  this.n = n
+}
+
+const a = createNew(A, 1)
+console.log(a.n) // 1
+```
 
 ### 实现继承
 
 ### ES6 class
 
 ## 作用域与闭包
+1. 作用域是一套规则，用来管理引擎如何在当前作用域以及嵌套的子作用域中根据标识符名称解析变量查找
+2. 作用域有两套工作模型：词法作用域 和 动态作用域
+3. 词法作用域: 在变量、函数定义阶段产生
+![scope](~@images/scope.png)
+4. 全局作用域（window, global）& 函数作用域 & 块作用域: with(es3 deprecated), try catch(es3), let const(es6)
+5. 闭包严格定义：函数在本身被定义的作用域之外执行，但依然保留了对定义时的作用域的引用（依然能访问定义时所在的作用域）
+    * 非严格形式
+    ![scope](~@images/closure-normal.png)
+    * 严格形式
+    ![scope](~@images/closure-strict.png)
 
 ### 理解作用域
 程序执行角度谈一谈作用域
