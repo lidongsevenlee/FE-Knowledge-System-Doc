@@ -131,6 +131,9 @@ console.log('end')
 
 ## 语法和API
 
+## 节流与防抖
+![scope](~@images/debounce-throttle.gif)
+
 ### ECMAScript 与 JavaScript的关系
 
 ### 实现数组处理函数（纯函数）.map, .filter, reduce
